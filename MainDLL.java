@@ -5,8 +5,15 @@ public class MainDLL {
     Scanner sc = new Scanner(System.in);
     DLLPembeli antrian = new DLLPembeli(); // Membuat linked list untuk antrian pembeli
     DLLPesanan daftarPesanan = new DLLPesanan(); ;; // Membuat linked list untuk daftar pesanan
+
+    // MODIFIKASI: Menambahkan 4 data dummy langsung melalui konstruktor saat inisialisasi program
+        antrian.addLast(new Pembeli(1, "Aini", "08123445566"));
+        antrian.addLast(new Pembeli(2, "Adin", "08124446677"));
+        antrian.addLast(new Pembeli(3, "Putri", "08125667788"));
+        antrian.addLast(new Pembeli(4, "Dimas", "08126668899"));
+
     int pilihan;
-    int noAntrian = 1; // Nomor antrian otomatis dimulai dari 1
+    int noAntrian = 5; // Nomor antrian otomatis dimulai dari 5 karena sudah ada data dummy dengan nomor antrian 1-4
 
     do {
         // Menampilkan menu utama
